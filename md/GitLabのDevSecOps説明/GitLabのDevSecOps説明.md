@@ -171,4 +171,3 @@ IaCScan --> クラウド設定セキュリティホール
 [Veracode：クラウド型アプリケーションセキュリティプラットフォーム](https://f2ff.jp/2021/interop/exhibitor/show.php?id=702&lang=ja)
 
 [【図解】Apache Log4jの脆弱性の仕組みと対応の必要性、攻撃有無の確認方法（CVE-2021-44228）](https://amg-solution.jp/blog/27313)
-
