@@ -7,4 +7,4 @@
 - [GitLabのDevSecOps説明](./md/GitLabのDevSecOps説明/GitLabのDevSecOps説明.md)
 - [テストカバレッジの考え方](./md/テストカバレッジの考え方/テストカバレッジの考え方.md)
 - [Gitブランチ戦略](./md/Gitブランチ戦略/Gitブランチ戦略.md)
-- [GitLab開発ガイドライン](./slide/GitLab開発ガイドライン/GitLab開発ガイドライン.md)
+- [GitLab開発ガイドライン](./slide/GitLab開発ガイドライン/contents.md)
