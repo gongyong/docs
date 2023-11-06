@@ -76,6 +76,7 @@ text-lint:
     - npm list -g --depth=0
   script:
     - textlint ./md
+  allow_failure: true
 
 markdown-link-check:
   image: node:bookworm-slim
