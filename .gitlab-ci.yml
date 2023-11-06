@@ -4,10 +4,10 @@ stages:
   - review
   - deploy
 
-# include:
-#   - project: 'taku-miyanaga/templates'
-#     ref: main
-#     file: 'OpenAI-Review.gitlab-ci.yml'
+include:
+  - project: 'taku-miyanaga/templates'
+    ref: main
+    file: 'OpenAI-Review.gitlab-ci.yml'
 
 variables:
   CODE_REVIEW_DISABLED: '1'
@@ -90,8 +90,8 @@ markdown-link-check:
     - bash mlc.sh
   allow_failure: true
 
-# openai-doc-review:
-#   stage: review
+openai-doc-review:
+  stage: review
 
 pages: # this job only make the artifact for auto deployment
   stage: deploy
