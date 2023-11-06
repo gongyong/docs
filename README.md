@@ -100,5 +100,5 @@ end
 ```
 
 - [リポジトリ](https://gitlab.com/taku-miyanaga/openai-review)
-- [パイプライン](https://gitlab.com/taku-miyanaga/openai-review/-/pipelines/1057805396)
+- [パイプライン](https://gitlab.com/taku-miyanaga/openai-review/-/pipelines/1061803197)
 - [マージリクエスト](https://gitlab.com/taku-miyanaga/openai-review/-/merge_requests/1)
