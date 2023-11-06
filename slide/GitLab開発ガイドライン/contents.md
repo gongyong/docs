@@ -14,7 +14,7 @@ style: div.mermaid { all: unset; }
 <!-- omit in toc -->
 # 概要
 
-本ガイドラインでは、GitLabでの開発を最初から全6ステップで説明する。詳細手順は各リンク先に確認のこと。
+本ガイドラインでは、GitLabでの開発を最初から全6ステップで説明する。
 
 ---
 <!-- omit in toc -->
@@ -47,26 +47,6 @@ graph LR
   開発者 -- 新規作成 --> リポジトリ
   開発者 -- 初期設定 --> ユーザ設定
 </div>
-
----
-
-# Step1. 詳細手順
-
-## リポジトリ作成
-
-新規  
-[GitLab日本語マニュアル プロジェクトの作成](https://gitlab-docs.creationline.com/ee/user/project/)
-
-既存リポジトリを移行  
-[GitLabへのリポジトリ移行手順](../../md/GitLabへのリポジトリ移行手順/GitLabへのリポジトリ移行手順.html)
-
-## 初期設定
-
-[EntraIDでのGitLabユーザ追加手順](../../md/EntraIDでのGitLabユーザ追加手順/EntraIDでのGitLabユーザ追加手順.html)
-
-[GitLab初回SSOログイン手順](../../md/GitLab初回SSOログイン手順/GitLab初回SSOログイン手順.html)
-
-[GitLabユーザ初期設定手順](../../md/GitLabユーザ初期設定手順/GitLabユーザ初期設定手順.html)
 
 ---
 
