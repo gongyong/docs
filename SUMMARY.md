@@ -5,3 +5,4 @@
 - [GitLabとは](./md/GitLabの考え方.md)
 - [チームのDevOpsレベル評価と改善](./md/チームのDevOpsレベル評価と改善/チームのDevOpsレベル評価と改善.md)
 - [GitLabのDevSecOps説明](./md/GitLabのDevSecOps説明/GitLabのDevSecOps説明.md)
+- [テストカバレッジの考え方](./md/テストカバレッジの考え方/テストカバレッジの考え方.md)
