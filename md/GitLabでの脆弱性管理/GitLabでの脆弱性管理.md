@@ -256,4 +256,3 @@ VulnerabilityReport_B -- 脆弱性 --> VulnerabilityReport_C
 - [NATIONAL VULNERABILITY DATABASE](https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&search_type=all&isCpeNameSearch=false)
 
 [CVE Details](https://www.cvedetails.com/)
-
