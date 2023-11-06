@@ -7,6 +7,7 @@
 ## 目的
 
 - GitLabを用いたDevSecOpsの実装デモ
+- GitLabで実現するDevSecOpsの説明
 - Documentation as Codeの実装デモ
 - 開発プロセスへのAI自動レビュー組込みデモ
 
@@ -49,7 +50,7 @@ end
 ```
 
 - [リポジトリ](https://gitlab.com/taku-miyanaga/docs)
-- [パイプライン](https://gitlab.com/taku-miyanaga/docs/-/pipelines/1057930244)
+- [パイプライン](https://gitlab.com/taku-miyanaga/docs/-/pipelines/1061807587)
 - [マージリクエスト](https://gitlab.com/taku-miyanaga/docs/-/merge_requests/1)
 
 ### OpenAI-Review
