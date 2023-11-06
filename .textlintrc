@@ -1,0 +1,20 @@
+{
+    "rules": {
+      "preset-ja-technical-writing": true,
+      "spellcheck-tech-word": true,
+      "prh": {
+        "rulePaths": [
+          "./prh/web+db.yml"
+        ]
+      }  
+    },
+    "filters": {
+        "comments": true,
+        "allowlist": {
+          "allow": [
+            "/^\\[.+\\]$[^]*?^\\[\\/.+\\]$/m"
+          ]
+        }
+    }
+  
+}

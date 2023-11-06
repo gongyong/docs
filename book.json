@@ -1,0 +1,30 @@
+{
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-sharing",
+        "-highlight",
+        "theme-official",
+        "mermaid-gb3",
+        "hide-published-with",
+        "search-pro-fixed",
+        "anchors",
+        "changelog", 
+        "prism",
+        "popup"
+    ],
+    "pluginsConfig": {
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        }
+    },
+    "changelog": {
+        "dateFormat": "YYYY-MM-DD"
+    },
+    "styles": {
+        "website": "styles/website.css"
+    },
+    "title": "GitLabで実現するDevSevOpsとAI連携"
+}

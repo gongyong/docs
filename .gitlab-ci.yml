@@ -1,2 +1,120 @@
-# The Docker image that will be used to build your app
-image: node
+stages:
+  - build
+  - test
+  - review
+  - deploy
+
+# include:
+#   - project: 'taku-miyanaga/templates'
+#     ref: main
+#     file: 'OpenAI-Review.gitlab-ci.yml'
+
+variables:
+  CODE_REVIEW_DISABLED: '1'
+  DOC_REVIEW_DISABLED: '0'
+
+build:
+  stage: build
+  image: node:12
+  before_script:
+    - npm install -g gitbook-cli
+    - cd /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules
+    - npm install graceful-fs@4.2.0 # install for Mermaid depedencies
+    - cd $CI_PROJECT_DIR
+    - gitbook fetch 3.2.3 # fetch finalstable version
+    - gitbook install # add any requested plugins in book.json
+    - git config --global core.quotepath false # except double quotaton to display jp comment
+  script:
+    - gitbook build . public # build to public path
+  cache:
+    key: "${CI_COMMIT_BRANCH}-build-artifact"
+    paths:
+      - public
+    policy: push
+
+build-slide:
+  image: docker:latest
+  stage: build
+  script:
+    - |
+        for file in slide/**/*.md; do
+          docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG -e MARP_USER="$(id -u):$(id -g)" marpteam/marp-cli --html $file -o ${file%.md}.html;
+        done
+  services:
+    - docker:dind
+  artifacts:
+    paths:
+      - slide/*
+
+markdown-lint:
+  stage: test
+  needs: [] # don't wait for build jobs
+  variables:
+    MARKDOWNLINT_VERSION: 0.23.0-alpine
+  image:
+    name: 06kellyjac/markdownlint-cli:${MARKDOWNLINT_VERSION}
+    entrypoint:
+      - "/usr/bin/env"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  before_script:
+    - markdownlint --version
+  script:
+    - find ./md -name "*.md" -type f -print0 | xargs -0 markdownlint --config ./rules.json
+
+text-lint:
+  image: node:16
+  stage: test
+  needs: [] # don't wait for build jobs
+  before_script:
+    - npm install textlint -g
+    - npm install textlint-rule-preset-ja-spacing -g
+    - npm install textlint-rule-preset-ja-technical-writing -g
+    - npm install textlint-rule-spellcheck-tech-word -g
+    - npm install textlint-filter-rule-allowlist -g
+    - npm install textlint-filter-rule-comments -g
+    - npm install textlint-rule-prh -g
+    - npm list -g --depth=0
+  script:
+    - textlint ./md
+
+markdown-link-check:
+  image: node:bookworm-slim
+  stage: test
+  needs: [] # don't wait for build jobs
+  before_script:
+    - apt update
+    - apt install -y nkf
+    - npm install markdown-link-check -g
+  script:
+    - cd ./sh
+    - bash mlc.sh
+  allow_failure: true
+
+# openai-doc-review:
+#   stage: review
+
+pages: # this job only make the artifact for auto deployment
+  stage: deploy
+  dependencies:
+    - build
+    - build-slide
+  script:
+    - cp assets/images/128.png public/gitbook/images/logo/ # override site logo
+    - cp assets/images/favicon.ico public/gitbook/images/
+    - cp -r pdf public/ # copy pdf files to public/pdf folder after build
+    - cp -r slide public/ # copy slide files
+  cache:
+    key: "${CI_COMMIT_BRANCH}-build-artifact"
+    paths:
+      - public
+    policy: pull
+  artifacts:
+    name: "html"
+    paths:
+      - public
+    expire_in: 1 min # this aritifact will be deleted immediately to save disk space
+  environment:
+    name: production
+    url: $CI_PAGES_URL
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
