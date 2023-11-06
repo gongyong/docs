@@ -1,6 +1,6 @@
 # gitGraphの描画用
 
-gitbook-cliがMermaid8.x以降に対応していないため、クライアント側で描画して画像として利用
+gitbook-cliがMermaid8.x以降に対応していないため、クライアント側で描画して画像として利用。
 
 ## GitHub Flow
 
