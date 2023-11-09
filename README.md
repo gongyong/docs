@@ -8,7 +8,7 @@
 
 - GitLabを用いたDevSecOpsの実装デモ
 - GitLabで実現するDevSecOpsの説明
-- Documentation as Codeの実装デモ
+- Docs as Codeの実装デモ
 - 開発プロセスへのAI自動レビュー組込みデモ
 
 ## 全体処理イメージ
