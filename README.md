@@ -26,9 +26,9 @@ subgraph GitLab
     end
     subgraph CICDパイプライン
         subgraph テスト
-            構文チェック
-            リンクチェック
-            日本語チェック
+            markdowm-link-check
+            markdowm-lint
+            text-lint
         end
         AIレビュー
         Gitbook
