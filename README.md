@@ -25,7 +25,12 @@ subgraph GitLab
         マークダウン
     end
     subgraph CICDパイプライン
-        Lint
+        subgraph Lint
+            構文チェック
+            リンクチェック
+            日本語チェック
+            辞書チェック
+        end
         AIレビュー
         Gitbook
         HTML
