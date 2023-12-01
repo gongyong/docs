@@ -42,7 +42,7 @@ subgraph GitLab
         Webサイト
     end
     マージリクエスト
-    マークダウン--チェック-->Lint
+    マークダウン--テスト-->リンクチェック
     マークダウン--レビュー-->AIレビュー
     AIレビュー--変更内容-->OpenAI-Review
     OpenAI-Review--ドキュメントレビュー依頼-->API
