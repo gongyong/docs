@@ -25,11 +25,10 @@ subgraph GitLab
         マークダウン
     end
     subgraph CICDパイプライン
-        subgraph Lint
+        subgraph テスト
             構文チェック
             リンクチェック
             日本語チェック
-            辞書チェック
         end
         AIレビュー
         Gitbook
@@ -42,7 +41,9 @@ subgraph GitLab
         Webサイト
     end
     マージリクエスト
-    マークダウン--テスト-->リンクチェック
+    マークダウン--リンクチェック-->markdowm-link-check
+    マークダウン--構文チェック-->markdowm-lint
+    マークダウン--日本語チェック-->text-lint
     マークダウン--レビュー-->AIレビュー
     AIレビュー--変更内容-->OpenAI-Review
     OpenAI-Review--ドキュメントレビュー依頼-->API
