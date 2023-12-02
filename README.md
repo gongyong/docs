@@ -26,12 +26,13 @@ subgraph GitLab
     end
     subgraph CICDパイプライン
         subgraph テスト
-            markdowm-link-check
-            markdowm-lint
-            text-lint
+            Markdown-Link-Check
+            Markdown-Lint
+            Text-Lint
         end
         AIレビュー
         Gitbook
+        Marp
         HTML
     end
     subgraph コンテナレジストリ
@@ -41,16 +42,18 @@ subgraph GitLab
         Webサイト
     end
     マージリクエスト
-    マークダウン--リンクチェック-->markdowm-link-check
-    マークダウン--構文チェック-->markdowm-lint
-    マークダウン--日本語チェック-->text-lint
+    マークダウン--リンクチェック-->Markdown-Link-Check
+    マークダウン--構文チェック-->Markdown-Lint
+    マークダウン--日本語チェック-->Text-Lint
     マークダウン--レビュー-->AIレビュー
     AIレビュー--変更内容-->OpenAI-Review
     OpenAI-Review--ドキュメントレビュー依頼-->API
     API--ドキュメントレビュー結果-->OpenAI-Review
     OpenAI-Review--レポート-->マージリクエスト
     マークダウン--ビルド-->Gitbook
+    マークダウン--ビルド-->Marp
     Gitbook--変換-->HTML
+    Marp--変換-->HTML
     HTML--デプロイ-->Webサイト
 end
 ```
