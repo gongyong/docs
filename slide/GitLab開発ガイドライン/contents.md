@@ -207,8 +207,6 @@ subgraph GitLab
 end
 </div>
 
-※参考 [チームのDevOpsレベル評価と改善](../../md/チームのDevOpsレベル評価と改善/チームのDevOpsレベル評価と改善.html)
-
 ---
 
-# 以上
+# Thank you
