@@ -18,7 +18,7 @@ const config: DocsThemeConfig = {
   ),
   docsRepositoryBase: 'https://gitlab.com/taku-miyanaga/docs/-/tree/main',
   project: {
-    link: 'hhttps://gitlab.com/taku-miyanaga/docs',
+    link: 'https://gitlab.com/taku-miyanaga/docs',
     icon: (
       <svg width="24" height="24" viewBox="0 0 256 256">
         <path
