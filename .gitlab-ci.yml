@@ -10,7 +10,7 @@ include:
     file: 'OpenAI-Review.gitlab-ci.yml'
 
 variables:
-  CODE_REVIEW_DISABLED: '1'
+  CODE_REVIEW_DISABLED: '0'
   DOC_REVIEW_DISABLED: '0'
 
 build:
