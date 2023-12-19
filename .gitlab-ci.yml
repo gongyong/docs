@@ -15,36 +15,18 @@ variables:
 
 build:
   stage: build
-  image: node:12
+  image: node:lts
   before_script:
-    - npm install -g gitbook-cli
-    - cd /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules
-    - npm install graceful-fs@4.2.0 # install for Mermaid depedencies
-    - cd $CI_PROJECT_DIR
-    - gitbook fetch 3.2.3 # fetch finalstable version
-    - gitbook install # add any requested plugins in book.json
-    - git config --global core.quotepath false # except double quotaton to display jp comment
+    - npm i next react react-dom nextra nextra-theme-docs
   script:
-    - gitbook build . public # build to public path
+    - npm run build # build to public path
+    - npm run export
+    - mv out public
   cache:
     key: "${CI_COMMIT_BRANCH}-build-artifact"
     paths:
       - public
     policy: push
-
-build-slide:
-  image: docker:latest
-  stage: build
-  script:
-    - |
-        for file in slide/**/*.md; do
-          docker run --rm -v $PWD:/home/marp/app/ -e LANG=$LANG -e MARP_USER="$(id -u):$(id -g)" marpteam/marp-cli --html $file -o ${file%.md}.html;
-        done
-  services:
-    - docker:dind
-  artifacts:
-    paths:
-      - slide/*
 
 markdown-lint:
   stage: test
@@ -59,7 +41,8 @@ markdown-lint:
   before_script:
     - markdownlint --version
   script:
-    - find ./md -name "*.md" -type f -print0 | xargs -0 markdownlint --config ./rules.json
+    - find ./pages -name "*.mdx" -type f -print0 | xargs -0 markdownlint --config ./rules.json
+  allow_failure: true
 
 text-lint:
   image: node:16
@@ -75,8 +58,7 @@ text-lint:
     - npm install textlint-rule-prh -g
     - npm list -g --depth=0
   script:
-    - textlint ./md
-  allow_failure: true
+    - textlint ./pages
 
 markdown-link-check:
   image: node:bookworm-slim
@@ -94,16 +76,16 @@ markdown-link-check:
 openai-doc-review:
   stage: review
 
+openai-code-review:
+  stage: review
+
 pages: # this job only make the artifact for auto deployment
   stage: deploy
   dependencies:
     - build
-    - build-slide
   script:
-    - cp assets/images/128.png public/gitbook/images/logo/ # override site logo
-    - cp assets/images/favicon.ico public/gitbook/images/
-    - cp -r pdf public/ # copy pdf files to public/pdf folder after build
-    - cp -r slide public/ # copy slide files
+    - cp -r assets public/assets
+    - cp -r pdf public/pdf
   cache:
     key: "${CI_COMMIT_BRANCH}-build-artifact"
     paths:

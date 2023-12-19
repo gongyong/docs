@@ -7,16 +7,10 @@
         "pattern": "^https://gitlab.com/groups/taku-miyanaga/"
       },
       {
-        "pattern": "^https://t8316.gitlab.io/"
-      },
-      {
         "pattern": "^https://bliki-ja.github.io/"
       },
       {
         "pattern": "^https://customers.gitlab.com/customers/sign_in"
-      },
-      {
-        "pattern": "^../../slide/"
       }
     ]
 }
