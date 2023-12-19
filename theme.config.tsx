@@ -5,15 +5,18 @@ const config: DocsThemeConfig = {
   logo: (
     <>
     <img
-      src="/assets/images/128.png"
+      src="assets/img/128.png"
       alt="logo"
-      style={{ maxWidth: "100px", height: "auto" }}
+      style={{ maxWidth: "40px", height: "auto", marginRight: "10px" }}
     />
+    <span>
+      DevSecOpsと関連技術の考察と実装
+    </span>
   </>
   ),
   head: (
     <>
-      <link rel="icon" href="/assets/images/favicon.ico" />
+      <link rel="icon" href="/assets/img/favicon.ico" />
     </>
   ),
   docsRepositoryBase: 'https://gitlab.com/taku-miyanaga/docs/-/tree/main',
