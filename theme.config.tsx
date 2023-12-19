@@ -6,11 +6,11 @@ const config: DocsThemeConfig = {
     <>
     <img
       src="assets/img/128.png"
-      alt="logo"
+      alt="Taku Miyanaga"
       style={{ maxWidth: "40px", height: "auto", marginRight: "10px" }}
     />
     <span>
-      DevSecOpsと関連技術の考察と実装
+      GitLabで実現すAるDevSecOpsとAI連携
     </span>
   </>
   ),
