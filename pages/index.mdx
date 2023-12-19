@@ -44,8 +44,7 @@ subgraph GitLab
             Text-Lint
         end
         AIレビュー
-        Gitbook
-        Marp
+        Nextra
         HTML
     end
     subgraph コンテナレジストリ
@@ -63,9 +62,8 @@ subgraph GitLab
     OpenAI-Review--ドキュメントレビュー依頼-->API
     API--ドキュメントレビュー結果-->OpenAI-Review
     OpenAI-Review--レポート-->マージリクエスト
-    マークダウン--ビルド-->Gitbook
-    マークダウン--ビルド-->Marp
-    Gitbook--変換-->HTML
+    マークダウン--ビルド-->Nextra
+    Nextra--変換-->HTML
     Marp--変換-->HTML
     HTML--デプロイ-->Webサイト
 end
