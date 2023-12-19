@@ -16,20 +16,9 @@ const config: DocsThemeConfig = {
       <link rel="icon" href="/assets/images/favicon.ico" />
     </>
   ),
-  docsRepositoryBase: 'https://gitlab.com/t8316/ts-svenson/document/-/blob/main',
-  footer: {
-    text: (
-      <span>
-        {new Date().getFullYear()} ©{' '}
-        <a href="https://www.trend-sol.jp" target="_blank">
-          Trend-sol
-        </a>
-        .
-      </span>
-    )
-  },
+  docsRepositoryBase: 'https://gitlab.com/taku-miyanaga/docs/-/tree/main',
   project: {
-    link: 'https://gitlab.com/t8316/ts-svenson/document',
+    link: 'hhttps://gitlab.com/taku-miyanaga/docs',
     icon: (
       <svg width="24" height="24" viewBox="0 0 256 256">
         <path
