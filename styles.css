@@ -131,21 +131,6 @@ main div.mt-12 {
   border: none;
 }
 
-/* Callout
-  ------------------------ */
-
-.nextra-callout {
-  box-sizing: border-box;
-  border-radius: 6px;
-  padding: 16px !important;
-  display: flex;
-  align-items: flex-start;
-}
-
-.nextra-callout .pr-2 {
-  padding-right: 1rem;
-}
-
 /* Headings
   ------------------------ */
 
