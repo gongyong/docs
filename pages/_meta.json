@@ -1,9 +1,4 @@
 {
   "index": "About",
-  "gitlab_philosophy": "GitLabの考え方",
-  "devops_level_assessment": "DevOpsレベル評価と改善",
-  "gitlab_devsecops_explanation": "GitLabのDevSecOps説明",
-  "gitlab_vulnerability_management": "GitLabでの脆弱性管理",
-  "git_branch_strategy": "Gitブランチ戦略",
-  "test_coverage_philosophy": "テストカバレッジの考え方"
+  "gitlab_philosophy": "GitLabの考え方"
 }
