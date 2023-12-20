@@ -19,6 +19,14 @@ const config: DocsThemeConfig = {
       <link rel="icon" href="/assets/img/favicon.ico" />
     </>
   ),
+  footer: {
+    text: (
+      <span>
+        {new Date().getFullYear()} ©{' '}
+        Taku Miyanaga.
+      </span>
+    )
+  },
   docsRepositoryBase: 'https://gitlab.com/taku-miyanaga/docs/-/tree/main',
   project: {
     link: 'https://gitlab.com/taku-miyanaga/docs',
