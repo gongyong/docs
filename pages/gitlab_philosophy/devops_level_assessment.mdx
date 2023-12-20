@@ -153,27 +153,46 @@ GitLabでDevOpsのレベルを上げるためには、CI/CDパイプラインに
 
 GitLabでは、前者をCI/CDパイプラインによって実現し、後者はEverything as codeのアプローチで徹底したコード化を行う。コード化によって、ソフトウェアの開発工程を工場ラインのようにヒューマンエラーと想定外の障害をとりぞいた予測・再現可能なプロセスを構築することができる。
 
+#### Everything as Codeのエコシステム
+
 ```mermaid
 mindmap
-  root((Everything as Code))
-    Infrastrucre as Code
-        インフラ
-    Configuration as Code
-        構成管理
-    Pipeline as Code
-        工程管理
-    Policy as Code
-        ポリシー
-    Docs as Code
-        ドキュメント
-    Schema as Code
-        DB
-    Monitoring as Code
-        モニター
-    Testing as Code
-        テスト
-　  Security as Code 
-        セキュリティ
+  root((Gitリポジトリ))
+    インフラ
+        Infrastrucre as Code
+            Terraform
+            AWS CloudFormation
+    構成 
+        Configuration as Code
+            Ansible
+            Chef
+    工程
+        Pipeline as Code
+            GiLab CI/CD
+            Circle CI
+    ポリシー
+        Policy as Code
+            Open Policy Agent
+    ドキュメント
+        Docs as Code
+            Jekyll
+            Hugo
+    DB
+        Schema as Code
+            Liquibase
+            Flyway
+    モニター
+        Monitoring as Code
+            Prometheus
+            DataDog
+    テスト
+        Testing as Code
+            JUnit
+            Selenium
+    セキュリティ
+　      Security as Code
+            SonarQube
+            Snyk
 ```
 
 ### GitLabでの1個流し
