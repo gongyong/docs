@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
       style={{ maxWidth: "40px", height: "auto", marginRight: "10px" }}
     />
     <span>
-      GitLabで実現すAるDevSecOpsとAI連携
+      GitLabで実現するDevSecOpsとAI連携
     </span>
   </>
   ),
