@@ -5,7 +5,7 @@ const config: DocsThemeConfig = {
   logo: (
     <>
     <img
-      src="assets/img/128.png"
+      src="/assets/img/128.png"
       alt="Taku Miyanaga"
       style={{ maxWidth: "40px", height: "auto", marginRight: "10px" }}
     />
