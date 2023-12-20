@@ -14,11 +14,11 @@ const config: DocsThemeConfig = {
     </span>
   </>
   ),
-  head: (
-    <>
-      <link rel="icon" href="/assets/img/favicon.ico" />
-    </>
-  ),
+  // head: (
+  //   <>
+  //     <link rel="icon" href="/assets/img/favicon.ico" />
+  //   </>
+  // ),
   footer: {
     text: (
       <span>
