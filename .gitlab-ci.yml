@@ -19,7 +19,7 @@ build:
   before_script:
     - npm i next react react-dom nextra nextra-theme-docs
   script:
-    - npm run build # build to public path
+    - npm run build
     - npm run export
     - mv out public
   cache:
@@ -84,15 +84,14 @@ pages: # this job only make the artifact for auto deployment
   dependencies:
     - build
   script:
-    - cp -r assets public/assets
-    - cp -r pdf public/pdf
+    - echo "Nothing to do"
   cache:
     key: "${CI_COMMIT_BRANCH}-build-artifact"
     paths:
       - public
     policy: pull
   artifacts:
-    name: "html"
+    name: "public"
     paths:
       - public
     expire_in: 1 min # this aritifact will be deleted immediately to save disk space
