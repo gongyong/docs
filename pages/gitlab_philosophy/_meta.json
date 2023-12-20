@@ -3,5 +3,6 @@
   "gitlab_devsecops_explanation": "GitLabのDevSecOps",
   "gitlab_vulnerability_management": "GitLabでの脆弱性管理",
   "git_branch_strategy": "Gitブランチ戦略",
-  "test_coverage_philosophy": "テストカバレッジの効率"
+  "test_coverage_philosophy": "テストカバレッジの効率",
+  "gitlab_step_guide": "GitLab開発ガイドライン"
 }
