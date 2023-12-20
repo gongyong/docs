@@ -48,7 +48,7 @@ subgraph GitLab
         HTML
     end
     subgraph コンテナレジストリ
-        OpenAI-Review
+        openai-review
     end
     subgraph GitLab Pages
         Webサイト
@@ -58,10 +58,10 @@ subgraph GitLab
     マークダウン--構文チェック-->Markdown-Lint
     マークダウン--日本語チェック-->Text-Lint
     マークダウン--レビュー-->AIレビュー
-    AIレビュー--変更内容-->OpenAI-Review
-    OpenAI-Review--ドキュメントレビュー依頼-->API
-    API--ドキュメントレビュー結果-->OpenAI-Review
-    OpenAI-Review--レポート-->マージリクエスト
+    AIレビュー--変更内容-->openai-review
+    openai-review--ドキュメントレビュー依頼-->API
+    API--ドキュメントレビュー結果-->openai-review
+    openai-review--レポート-->マージリクエスト
     マークダウン--ビルド-->Nextra
     Nextra--変換-->HTML
     HTML--デプロイ-->Webサイト
@@ -95,11 +95,11 @@ subgraph GitLab
         AIレビュー
     end
     subgraph コンテナレジストリ
-        OpenAI-Review
+        openai-review
     end
     マージリクエスト
     コード--ビルド-->Dockerイメージ
-    Dockerイメージ--デプロイ-->OpenAI-Review
+    Dockerイメージ--デプロイ-->openai-review
     コード--コード品質チェック-->Code_Quality
     コード--脆弱性チェック-->Container_Scan
     コード--機密情報チェック-->Secret_Detection
@@ -111,10 +111,10 @@ subgraph GitLab
     SAST--レポート-->マージリクエスト
     Unit_Test--レポート-->マージリクエスト
     コード--レビュー-->AIレビュー
-    AIレビュー--変更内容-->Dockerイメージ
-    Dockerイメージ-- コードレビュー依頼-->API
-    API--コードレビュー結果-->Dockerイメージ
-    Dockerイメージ--レポート-->マージリクエスト
+    AIレビュー--変更内容-->openai-review
+    openai-review-- コードレビュー依頼-->API
+    API--コードレビュー結果-->openai-review
+    openai-review--レポート-->マージリクエスト
 end
 ```
 
