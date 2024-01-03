@@ -97,7 +97,7 @@ pages: # this job only make the artifact for auto deployment
       - public
     expire_in: 1 min # this aritifact will be deleted immediately to save disk space
   environment:
-    name: production
+    name: review
     url: $CI_PAGES_URL
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
