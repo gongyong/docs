@@ -30,6 +30,9 @@ GitLabを使用したDevSecOps、及びAIレビューの開発プロセス組込
 
 ```mermaid
 graph LR
+subgraph Vercel
+    公開用Web
+end
 subgraph OpenAI
     API
 end
@@ -51,7 +54,7 @@ subgraph GitLab
         openai-review
     end
     subgraph GitLab Pages
-        Webサイト
+        レビュー用Web
     end
     マージリクエスト
     マークダウン--リンクチェック-->Markdown-Link-Check
@@ -64,7 +67,8 @@ subgraph GitLab
     openai-review--レポート-->マージリクエスト
     マークダウン--ビルド-->Nextra
     Nextra--変換-->HTML
-    HTML--デプロイ-->Webサイト
+    HTML--デプロイ-->レビュー用Web
+    マークダウン--リリース-->公開用Web
 end
 ```
 
