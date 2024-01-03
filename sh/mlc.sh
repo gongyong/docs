@@ -2,7 +2,7 @@
 
 has_error=0
 
-for file in $(find ../md -name "*.md"); do
+for file in $(find ../pages -name "*.mdx"); do
     markdown-link-check $file --config ../mlc_config.json | tee -a mlc_report.txt
     status=${PIPESTATUS[0]}
     if [ $status -eq 0 ]; then

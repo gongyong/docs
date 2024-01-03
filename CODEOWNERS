@@ -1,10 +1,10 @@
 # Code Owners for a file
 [File section]
-.gitlab-ci.yml @taku-miyanaga
+.gitlab-ci.yml @t-miyanaga
 
 # Code Owners for a directory
 [Directory section]
-md/ @taku-miyanaga
+md/ @t-miyanaga
 
 # All group members as Code Owners for a file
 [Group section]
