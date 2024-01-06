@@ -159,14 +159,14 @@ graph LR
       end
       イシュー
   end
-  subgraph 監視ツール 
+  subgraph 監視ツール
     Sentry等
     PagerDuty等
   end
-  subgraph 稼働システム 
+  subgraph 稼働システム
     サーバー
     マネージドサービス
-  end 
+  end
   開発者 -- 設定 --> Sentry等
   開発者 -- 設定 --> PagerDuty等
   Sentry等 -- 連携 --> エラートラッキング
