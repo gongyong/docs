@@ -1,5 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from 'next/router'
 
 const config: DocsThemeConfig = {
   logo: (
@@ -19,6 +20,14 @@ const config: DocsThemeConfig = {
   //     <link rel="icon" href="/assets/img/favicon.ico" />
   //   </>
   // ),
+  useNextSeoProps() {
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s'
+      }
+    }
+  },
   footer: {
     text: (
       <span>
@@ -28,6 +37,7 @@ const config: DocsThemeConfig = {
     )
   },
   docsRepositoryBase: 'https://gitlab.com/taku-miyanaga/docs/-/tree/main',
+  
   project: {
     link: 'https://gitlab.com/taku-miyanaga/docs',
     icon: (
