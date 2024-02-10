@@ -23,7 +23,7 @@ t.miyanaga@gmail.com
 
 ### 写真
 
-![alt](./img/miyanaga2.jpg)
+![alt](./img/miyanaga2.png)
 
 ## 学歴
 

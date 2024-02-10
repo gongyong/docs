@@ -22,7 +22,7 @@
 
 ### 照片
 
-![alt](./img/miyanaga2.jpg)
+![alt](./img/miyanaga2.png)
 
 ## 教育經歷
 
