@@ -4,7 +4,8 @@
 
 ### 姓名
 
-宮永卓（gongyong zhuo）
+gongyong zhuo
+宮永 卓
 
 ### 出生日期
 
@@ -69,9 +70,9 @@ https://gitlab.com/taku-miyanaga
 
 |年份|月份|公司|項目內容|在職期間|
 |---|---|---|---|---|
-|2018|7|E-technology株式会社（現職）|海外開發|5年6個月|
-|2014|7|TOYOTA Connected Beijing|面向整車製造商的銷售及物流系統開發|4年|
-|2003|4|Nippon Computer株式会社|面向公共的養老保險包系統開發|9年9個月|
+|2018|7|E-technology Co., Ltd（現在）|海外開發|5年6個月|
+|2014|7|TOYOTA Connected Beijing Co., Ltd |面向整車製造商的銷售及物流系統開發|4年|
+|2003|4|Nippon Computer Co., Ltd |面向公共的養老保險包系統開發|9年9個月|
 
 ## 工作經歷詳細
 
@@ -80,7 +81,7 @@ https://gitlab.com/taku-miyanaga
 #### 項目概要：DevSecOps開發流程的引入
 
 - 開發周期：2023年4月至今
-- 職責：顧問
+- 職責：Consultant
 - 技術棧：AWS、Azure、Linux、Windows、C#、Shell、Sitecore、Docker、GitLab
 - 詳情：為了應對某公司發生的個人信息洩露事件，使用GitLab引入DevSecOps開發流程，以提升系統安全性和開發效率
 
@@ -127,4 +128,4 @@ https://gitlab.com/taku-miyanaga
 - 開發周期：2003年4月至2012年12月
 - 職責：需求定義、架構構建、基本設計、實施
 - 技術棧：Windows、Java、C#、SQL Server、Symfoware
-- 詳情：針對養老及衛生所的包開發，上海的海外辦事處設立，系統整體的架構構建
+- 詳細：為地方政府開發的長期照護保險與衛生保健套件。經歷從程式設計師到專案管理的全過程，負責系統整體的架構設計。之後負責在上海的離岸開發啟動，2007至2012年作為中國離岸開發據點領導者，常駐於上海微創軟件股份有限公司。
