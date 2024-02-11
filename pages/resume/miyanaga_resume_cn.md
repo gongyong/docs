@@ -4,7 +4,7 @@
 
 ### 姓名
 
-gongyong zhuo
+gongyong zhuo  
 宮永 卓
 
 ### 出生日期
@@ -13,7 +13,7 @@ gongyong zhuo
 
 ### 地址
 
-〒140-0011
+〒140-0011  
 東京都品川區東大井4-7-14 Homaro品川304
 
 ### 聯繫方式
@@ -70,7 +70,7 @@ https://gitlab.com/taku-miyanaga
 
 |年份|月份|公司|項目內容|在職期間|
 |---|---|---|---|---|
-|2018|7|E-technology Co., Ltd（現在）|海外開發|5年6個月|
+|2018|7|E-technology Co., Ltd（現在）|Offshore開發|5年6個月|
 |2014|7|TOYOTA Connected Beijing Co., Ltd |面向整車製造商的銷售及物流系統開發|4年|
 |2003|4|Nippon Computer Co., Ltd |面向公共的養老保險包系統開發|9年9個月|
 
