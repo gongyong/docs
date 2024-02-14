@@ -13,13 +13,12 @@
 
 ### 住所
 
-〒140-0011  
-東京都品川区東大井4-7-14 ホマーロ品川304
+東京都品川区XXXXXXXXXXXX
 
 ### 連絡先
 
-090-7775-1089  
-t.miyanaga@gmail.com
+090-XXXX-XXXX  
+XXXX@XXXXX.com
 
 ### 写真
 

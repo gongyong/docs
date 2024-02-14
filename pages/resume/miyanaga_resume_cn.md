@@ -12,14 +12,13 @@ gongyong zhuo
 1978年1月18日
 
 ### 地址
-
-〒140-0011  
-東京都品川區東大井4-7-14 Homaro品川304
+  
+東京都品川區XXXXXXXXXXXX
 
 ### 聯繫方式
 
-手机：090-7775-1089  
-郵箱：t.miyanaga@gmail.com
+手机：090-XXXX-XXXX  
+郵箱：XXXX@XXXXX.com
 
 ### 照片
 
