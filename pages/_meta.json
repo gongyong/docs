@@ -2,17 +2,17 @@
   "index": "About",
   "gitlab_philosophy": "GitLabでのDevOps",
   "ai_review": "AI連携",
-  "resume": {
+  "history": {
     "title": "Resume",
     "type": "menu",
     "items": {
       "ja": {
         "title": "日本語",
-        "href": "resume/miyanaga_resume_ja"
+        "href": "/resume/miyanaga_resume_ja"
       },
       "cn": {
         "title": "中文",
-        "href": "resume/miyanaga_resume_cn"
+        "href": "/resume/miyanaga_resume_cn"
       }
     }
   }
