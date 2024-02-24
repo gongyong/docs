@@ -22,7 +22,7 @@ XXXX@XXXXX.com
 
 ### 写真
 
-![alt](./img/miyanaga2.png)
+![alt](./miyanaga2.png)
 
 ## 学歴
 
