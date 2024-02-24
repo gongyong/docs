@@ -2,6 +2,9 @@
   "index": "About",
   "gitlab_philosophy": "GitLabでのDevOps",
   "ai_review": "AI連携",
+  "resume":  {
+    "display": "hidden"
+  },
   "history": {
     "title": "Resume",
     "type": "menu",
