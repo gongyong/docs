@@ -20,10 +20,6 @@ gongyong zhuo
 手机：090-XXXX-XXXX  
 郵箱：XXXX@XXXXX.com
 
-### 照片
-
-![alt](./miyanaga2.png)
-
 ## 教育經歷
 
 |年份|月份|說明|
