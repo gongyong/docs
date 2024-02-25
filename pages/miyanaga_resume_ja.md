@@ -20,10 +20,6 @@
 090-XXXX-XXXX  
 XXXX@XXXXX.com
 
-### 写真
-
-![alt](./miyanaga2.png)
-
 ## 学歴
 
 |年|月||
